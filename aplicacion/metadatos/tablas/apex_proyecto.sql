@@ -35,12 +35,12 @@ INSERT INTO apex_proyecto (proyecto, descripcion, descripcion_corta, estilo, con
 	NULL, --sesion_subclase
 	NULL, --sesion_subclase_archivo
 	'13', --pm_contexto
-	NULL, --contexto_ejecucion_subclase
-	NULL, --contexto_ejecucion_subclase_archivo
+	'contexto_ejecucion', --contexto_ejecucion_subclase
+	'contexto_ejecucion.php', --contexto_ejecucion_subclase_archivo
 	'13', --pm_usuario
 	NULL, --usuario_subclase
 	NULL, --usuario_subclase_archivo
-	NULL, --encriptar_qs
+	'0', --encriptar_qs
 	'1', --registrar_solicitud
 	NULL, --registrar_cronometro
 	'2', --item_inicio_sesion
@@ -56,7 +56,7 @@ INSERT INTO apex_proyecto (proyecto, descripcion, descripcion_corta, estilo, con
 	NULL, --version_detalle
 	NULL, --version_link
 	NULL, --tiempo_espera_ms
-	NULL, --navegacion_ajax
+	'0', --navegacion_ajax
 	NULL, --codigo_ga_tracker
 	TRUE, --extension_toba
 	FALSE  --extension_proyecto
