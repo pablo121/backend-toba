@@ -8,17 +8,19 @@
     }
   ],
   "require": {
-    "siu-toba/framework": "~3.3"
+    "siu-toba/framework": "~3.3",
+    "ckeditor/ckeditor": "4.*",
+    "siu/manejador-salida-bootstrap": "^1.0"
   },
   "config": {
      "bin-dir": "./bin" 
   },
   "scripts": {
      "post-install-cmd": [
-           "composer run-script post-install-cmd -d ./vendor/siu-toba/framework/"
+           "composer run-script post-install-cmd -d ./vendor/siu/manejador-salida-bootstrap/"
      ],
      "post-update-cmd": [
-            "composer run-script post-install-cmd -d ./vendor/siu-toba/framework/"
+           "composer run-script post-install-cmd -d ./vendor/siu/manejador-salida-bootstrap/"
      ]
   },
   "minimum-stability": "dev",

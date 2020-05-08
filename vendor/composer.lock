@@ -4,8 +4,50 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "109a35688cfa089256eeea5fe06319b3",
+    "content-hash": "6147f8b40d81baca263b9b1249940576",
     "packages": [
+        {
+            "name": "ckeditor/ckeditor",
+            "version": "4.14.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ckeditor/ckeditor4-releases.git",
+                "reference": "998e43cd6305bca24304b9538a682da123ac5b73"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ckeditor/ckeditor4-releases/zipball/998e43cd6305bca24304b9538a682da123ac5b73",
+                "reference": "998e43cd6305bca24304b9538a682da123ac5b73",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+",
+                "LGPL-2.1+",
+                "MPL-1.1+"
+            ],
+            "authors": [
+                {
+                    "name": "CKSource",
+                    "homepage": "https://cksource.com"
+                }
+            ],
+            "description": "JavaScript WYSIWYG web text editor.",
+            "homepage": "https://ckeditor.com/ckeditor-4/",
+            "keywords": [
+                "CKEditor",
+                "ckeditor4",
+                "editor",
+                "fckeditor",
+                "html",
+                "javascript",
+                "richtext",
+                "text",
+                "wysiwyg"
+            ],
+            "time": "2020-03-04T13:19:40+00:00"
+        },
         {
             "name": "container-interop/container-interop",
             "version": "1.2.0",
@@ -2590,6 +2632,40 @@
             ],
             "description": "Utilidades para el parseo y chequeo de schemas de archivos Json",
             "time": "2016-04-19T14:36:23+00:00"
+        },
+        {
+            "name": "siu/manejador-salida-bootstrap",
+            "version": "v1.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://gitlab.siu.edu.ar/siu/manejador-salida-bootstrap.git",
+                "reference": "85c340bc666d0b2408767424d5ca670d9e9345a5"
+            },
+            "require": {
+                "siu/interfaces-manejador-salida-toba": "^1.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src"
+                }
+            },
+            "scripts": {
+                "post-install-cmd": [
+                    "yarn add font-awesome@4.7.0 respond.js@1.4.2 html5shiv@3.7.3  --modules-folder tmp_assets/",
+                    "yarn add bootstrap@3.3.7  --no-dev --modules-folder tmp_assets/",
+                    "yarn install",
+                    "php bin/instalar_assets.php"
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Paulo Toledo",
+                    "email": "ptoledo@siu.edu.ar"
+                }
+            ],
+            "description": "Implementacion del patron 'Abstract Factory' para la salida Bootstrap",
+            "time": "2020-04-02T20:21:06+00:00"
         },
         {
             "name": "siu/manejador-salida-toba",
