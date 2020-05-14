@@ -59,6 +59,8 @@ class ci_publicaciones extends portal_ci
 
 	function evt__formulario__modificacion($datos)
 	{
+		if($datos['usuario']=='')
+			$datos['usuario']=toba::usuario()->get_id();
 		$this->dep('datos')->tabla('publicaciones')->set($datos);
 	}
 
