@@ -21,12 +21,12 @@ class Publicacion implements portal_tablas
 		}
 		$sql = "SELECT
 			t_p.id,
-			t_pt.denominacion as id_tipo_estado_nombre,
+			t_pt.denominacion as tipo_estado,
 			t_p.titulo,
 			t_p.descripcion,
 			t_p.cuerpo,
 			t_p.fecha_publicacion,
-			t_c.descripcion as id_categoria_nombre,
+			t_c.descripcion as categoria,
 			t_p.fecha_operacion,
 			t_p.usuario,
 			t_p.tag

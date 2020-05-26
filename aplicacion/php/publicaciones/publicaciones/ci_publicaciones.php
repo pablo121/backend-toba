@@ -51,7 +51,11 @@ class ci_publicaciones extends portal_ci
 	function conf__formulario(toba_ei_formulario $form)
 	{
 		if ($this->dep('datos')->esta_cargada()) {
-			$form->set_datos($this->dep('datos')->tabla('publicaciones')->get());
+			$datos = $this->dep('datos')->tabla('publicaciones')->get();
+
+			$datos['path'] = $datos['path'];
+            $datos['path_aux'] = $datos['path'];
+			$form->set_datos($datos);
 		} else {
 			$this->pantalla()->eliminar_evento('eliminar');
 		}
@@ -61,6 +65,13 @@ class ci_publicaciones extends portal_ci
 	{
 		if($datos['usuario']=='')
 			$datos['usuario']=toba::usuario()->get_id();
+//$datos = base64_encode(file_get_contents($datos['path']['tmp_name']));
+//ei_arbol($datos['path']['tmp_name']);
+		if (is_array($datos['path']))
+            $datos['path'] = base64_encode(file_get_contents($datos['path']['tmp_name']));
+		else
+            $datos['path'] = $datos['path_aux'];
+
 		$this->dep('datos')->tabla('publicaciones')->set($datos);
 	}
 

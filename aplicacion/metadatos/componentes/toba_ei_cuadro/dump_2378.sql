@@ -152,11 +152,33 @@ INSERT INTO apex_objeto_cuadro (objeto_cuadro_proyecto, objeto_cuadro, titulo, s
 	NULL, --desplegable_activo
 	'0', --scroll
 	NULL, --scroll_alto
-	NULL, --cc_modo
-	NULL, --cc_modo_anidado_colap
+	't', --cc_modo
+	'0', --cc_modo_anidado_colap
 	NULL, --cc_modo_anidado_totcol
 	NULL  --cc_modo_anidado_totcua
 );
+
+------------------------------------------------------------
+-- apex_objeto_cuadro_cc
+------------------------------------------------------------
+
+--- INICIO Grupo de desarrollo 0
+INSERT INTO apex_objeto_cuadro_cc (objeto_cuadro_proyecto, objeto_cuadro, objeto_cuadro_cc, identificador, descripcion, orden, columnas_id, columnas_descripcion, pie_contar_filas, pie_mostrar_titular, pie_mostrar_titulos, imp_paginar, modo_inicio_colapsado) VALUES (
+	'portal', --objeto_cuadro_proyecto
+	'2378', --objeto_cuadro
+	'36', --objeto_cuadro_cc
+	'categoria', --identificador
+	'Categoria', --descripcion
+	'1', --orden
+	'categoria', --columnas_id
+	'categoria', --columnas_descripcion
+	'0', --pie_contar_filas
+	'0', --pie_mostrar_titular
+	'0', --pie_mostrar_titulos
+	NULL, --imp_paginar
+	'0'  --modo_inicio_colapsado
+);
+--- FIN Grupo de desarrollo 0
 
 ------------------------------------------------------------
 -- apex_objeto_ei_cuadro_columna
@@ -167,7 +189,7 @@ INSERT INTO apex_objeto_ei_cuadro_columna (objeto_cuadro_proyecto, objeto_cuadro
 	'portal', --objeto_cuadro_proyecto
 	'2378', --objeto_cuadro
 	'877', --objeto_cuadro_col
-	'estado', --clave
+	'tipo_estado', --clave
 	'7', --orden
 	'Estado', --titulo
 	'ei-cuadro-col-tit', --estilo_titulo
@@ -322,7 +344,7 @@ INSERT INTO apex_objeto_ei_cuadro_columna (objeto_cuadro_proyecto, objeto_cuadro
 	'portal', --objeto_cuadro_proyecto
 	'2378', --objeto_cuadro
 	'882', --objeto_cuadro_col
-	'id_categoria_nombre', --clave
+	'categoria', --clave
 	'4', --orden
 	'Categoria', --titulo
 	'ei-cuadro-col-tit', --estilo_titulo
