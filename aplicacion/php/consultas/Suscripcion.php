@@ -1,5 +1,5 @@
 <?php
-class Suscripcion implements portal_tablas
+class Suscripcion
 {
 	function get_listado($filtro=array())
 	{

@@ -187,9 +187,9 @@ INSERT INTO apex_objeto_ei_formulario_ef (objeto_ei_formulario_fila, objeto_ei_f
 	NULL, --estado_defecto
 	'0', --solo_lectura
 	'0', --solo_lectura_modificacion
-	'get_estados_grales', --carga_metodo
-	'Tipos_dato', --carga_clase
-	'consultas/Tipos_dato.php', --carga_include
+	'get_estados_publicaciones', --carga_metodo
+	'Tipos', --carga_clase
+	'consultas/Tipos.php', --carga_include
 	NULL, --carga_dt
 	NULL, --carga_consulta_php
 	NULL, --carga_sql
@@ -417,7 +417,7 @@ INSERT INTO apex_objeto_ei_formulario_ef (objeto_ei_formulario_fila, objeto_ei_f
 	'0', --obligatorio
 	'0', --oculto_relaja_obligatorio
 	'2', --orden
-	'Categoria', --etiqueta
+	'Seccion', --etiqueta
 	NULL, --etiqueta_estilo
 	NULL, --descripcion
 	'0', --colapsado
@@ -431,8 +431,8 @@ INSERT INTO apex_objeto_ei_formulario_ef (objeto_ei_formulario_fila, objeto_ei_f
 	'0', --solo_lectura
 	'0', --solo_lectura_modificacion
 	'get_categorias', --carga_metodo
-	'Tipos_dato', --carga_clase
-	'consultas/Tipos_dato.php', --carga_include
+	'Tipos', --carga_clase
+	'consultas/Tipos.php', --carga_include
 	NULL, --carga_dt
 	NULL, --carga_consulta_php
 	NULL, --carga_sql

@@ -1,5 +1,5 @@
 <?php
-class Tipos_dato implements portal_tablas
+class Tipos_dato
 {
     public function get_listado($filtro = array())
 	{
@@ -36,15 +36,6 @@ class Tipos_dato implements portal_tablas
     public function get_descripcion($id)
     {
         // TODO: Implement get_descripcion() method.
-    }
-
-    public function get_categorias(){
-	    $filtro=array('id_clasificacion'=>2);
-	    return self::get_listado($filtro);
-    }
-    public function get_estados_grales(){
-        $filtro=array('id_clasificacion'=>1);
-        return self::get_listado($filtro);
     }
 }
 ?>

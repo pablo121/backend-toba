@@ -1,5 +1,5 @@
 <?php
-class Publicacion implements portal_tablas
+class Publicacion
 {
 	function get_listado($filtro=array())
 	{
@@ -34,10 +34,9 @@ class Publicacion implements portal_tablas
 			publicaciones as t_p,
 			param_tipos as t_pt,
 			categorias as t_c
-		WHERE
-				t_p.id_tipo_estado = t_pt.id
-			AND  t_p.id_categoria = t_c.id
-		ORDER BY descripcion";
+		WHERE	t_p.id_tipo_estado = t_pt.id
+				AND  t_p.id_categoria = t_c.id
+		ORDER BY t_p.fecha_publicacion DESC";
 		if (count($where)>0) {
 			$sql = sql_concatenar_where($sql, $where);
 		}

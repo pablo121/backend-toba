@@ -155,7 +155,18 @@ INSERT INTO apex_objeto_ut_formulario (objeto_ut_formulario_proyecto, objeto_ut_
 	NULL, --analisis_cambios
 	'1', --no_imprimir_efs_sin_estado
 	'1', --resaltar_efs_con_estado
-	NULL, --template
+	'<table style="width: 100%;">
+	<tbody>
+		<tr>
+			<td>[ef id=id_tipo_categoria]</td>
+			<td>[ef id=id_tipo_estado]</td>
+		</tr>
+		<tr>
+			<td>[ef id=denominacion]</td>
+			<td>[ef id=suscripciones]</td>
+		</tr>
+	</tbody>
+</table>', --template
 	NULL  --template_impresion
 );
 
@@ -174,7 +185,7 @@ INSERT INTO apex_objeto_ei_formulario_ef (objeto_ei_formulario_fila, objeto_ei_f
 	'0', --obligatorio
 	'0', --oculto_relaja_obligatorio
 	'1', --orden
-	'Categoria', --etiqueta
+	'Seccion', --etiqueta
 	NULL, --etiqueta_estilo
 	NULL, --descripcion
 	'0', --colapsado
@@ -188,8 +199,8 @@ INSERT INTO apex_objeto_ei_formulario_ef (objeto_ei_formulario_fila, objeto_ei_f
 	'0', --solo_lectura
 	'0', --solo_lectura_modificacion
 	'get_categorias', --carga_metodo
-	'Tipos_dato', --carga_clase
-	'consultas/Tipos_dato.php', --carga_include
+	'Tipos', --carga_clase
+	'consultas/Tipos.php', --carga_include
 	NULL, --carga_dt
 	NULL, --carga_consulta_php
 	NULL, --carga_sql
@@ -269,8 +280,8 @@ INSERT INTO apex_objeto_ei_formulario_ef (objeto_ei_formulario_fila, objeto_ei_f
 	'0', --solo_lectura
 	'0', --solo_lectura_modificacion
 	'get_estados_grales', --carga_metodo
-	'Tipos_dato', --carga_clase
-	'consultas/Tipos_dato.php', --carga_include
+	'Tipos', --carga_clase
+	'consultas/Tipos.php', --carga_include
 	NULL, --carga_dt
 	NULL, --carga_consulta_php
 	NULL, --carga_sql

@@ -1,0 +1,3 @@
+INSERT INTO apex_revision (revision, creacion) VALUES ('DESCONOCIDA', '2020-07-15 23:48:47');
+INSERT INTO apex_instancia (instancia, version, institucion, observaciones, administrador_1, administrador_2, administrador_3, creacion) VALUES ('desarrollo', '3.3.9', NULL, NULL, NULL, NULL, NULL, '2020-07-15 23:48:47');
+INSERT INTO apex_checksum_proyectos (checksum, proyecto) ( SELECT 'fd349fca20e15acf4689b576d9598e810188d240f98b1f91683c6bcb1f9ee636', 'portal' WHERE NOT EXISTS ( SELECT 1  FROM apex_checksum_proyectos WHERE  checksum = 'fd349fca20e15acf4689b576d9598e810188d240f98b1f91683c6bcb1f9ee636'  AND  proyecto = 'portal' ));

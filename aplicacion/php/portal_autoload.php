@@ -53,7 +53,8 @@ class portal_autoload
 		'Provincia'=>'consultas/Provincia.php',
 		'Publicacion'=>'consultas/Publicacion.php',
 		'Suscripcion'=>'consultas/Suscripcion.php',
-		'Tipos_dato'=>'consultas/Tipo_dato.php',
+		'Tipos_dato'=>'consultas/Tipos_dato.php',
+		'Tipos'=>'consultas/Tipos.php',
 	);
 }
 ?>

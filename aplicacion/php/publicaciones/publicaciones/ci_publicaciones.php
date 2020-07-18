@@ -52,9 +52,12 @@ class ci_publicaciones extends portal_ci
 	{
 		if ($this->dep('datos')->esta_cargada()) {
 			$datos = $this->dep('datos')->tabla('publicaciones')->get();
-
-			$datos['path'] = $datos['path'];
-            $datos['path_aux'] = $datos['path'];
+			if($datos['path'] != null ){
+				$datos['path_aux'] = $datos['path'];
+				$datos['path'] = 'Imagen portada';
+            	
+			}
+			
 			$form->set_datos($datos);
 		} else {
 			$this->pantalla()->eliminar_evento('eliminar');
@@ -63,14 +66,17 @@ class ci_publicaciones extends portal_ci
 
 	function evt__formulario__modificacion($datos)
 	{
+		//ei_arbol($datos);
 		if($datos['usuario']=='')
 			$datos['usuario']=toba::usuario()->get_id();
 //$datos = base64_encode(file_get_contents($datos['path']['tmp_name']));
 //ei_arbol($datos['path']['tmp_name']);
-		if (is_array($datos['path']))
-            $datos['path'] = base64_encode(file_get_contents($datos['path']['tmp_name']));
-		else
-            $datos['path'] = $datos['path_aux'];
+		if($datos['path'] != 'Imagen portada'){
+			if (is_array($datos['path']))
+				$datos['path'] = base64_encode(file_get_contents($datos['path']['tmp_name']));
+			else
+				$datos['path'] = $datos['path_aux'];
+		}
 
 		$this->dep('datos')->tabla('publicaciones')->set($datos);
 	}
