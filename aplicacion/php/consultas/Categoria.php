@@ -11,7 +11,7 @@ class Categoria implements portal_tablas
 			$where[] = "id_tipo_estado = ".quote($filtro['id_tipo_estado']);
 		}
 		if (isset($filtro['id_padre'])) {
-			$where[] = "id_padre = ".quote($filtro['id_padre']);
+			$where[] = "t_c.id_padre = ".quote($filtro['id_padre']);
 		}
 		if (isset($filtro['codigo'])) {
 			$where[] = "codigo ILIKE ".quote("%{$filtro['codigo']}%");
@@ -33,8 +33,8 @@ class Categoria implements portal_tablas
 			t_c.orden,
 			t_c.principal,
 			t_c.imagen_portada,
-			t_padre.id as id_padre,
-			case when id_padre is null then 'PRINCIPAL'
+			t_padre.id as padre,
+			case when t_c.id_padre is null then 'PRINCIPAL'
 				else t_padre.denominacion
 			end as seccion_padre
 		FROM categorias as t_c
