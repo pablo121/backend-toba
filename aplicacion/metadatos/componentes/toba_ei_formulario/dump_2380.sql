@@ -22,7 +22,7 @@ INSERT INTO apex_objeto (proyecto, objeto, anterior, identificador, reflexivo, c
 	NULL, --objeto_categoria
 	'Publicaciones - Filtro', --nombre
 	'Busqueda Avanzada', --titulo
-	'0', --colapsable
+	'1', --colapsable
 	NULL, --descripcion
 	'portal', --fuente_datos_proyecto
 	'portal', --fuente_datos
@@ -155,7 +155,19 @@ INSERT INTO apex_objeto_ut_formulario (objeto_ut_formulario_proyecto, objeto_ut_
 	NULL, --analisis_cambios
 	'1', --no_imprimir_efs_sin_estado
 	'1', --resaltar_efs_con_estado
-	NULL, --template
+	'<table style="width: 100%;">
+	<tbody>
+		<tr>
+			<td>[ef id=titulo]</td>
+			<td>[ef id=id_categoria]</td>
+			<td>[ef id=id_tipo_estado]</td>
+		</tr>
+		<tr>
+			<td>[ef id=usuario]</td>
+			<td>[ef id=fecha_publicacion]</td>
+		</tr>
+	</tbody>
+</table>', --template
 	NULL  --template_impresion
 );
 
@@ -430,9 +442,9 @@ INSERT INTO apex_objeto_ei_formulario_ef (objeto_ei_formulario_fila, objeto_ei_f
 	NULL, --estado_defecto
 	'0', --solo_lectura
 	'0', --solo_lectura_modificacion
-	'get_categorias', --carga_metodo
-	'Tipos', --carga_clase
-	'consultas/Tipos.php', --carga_include
+	'get_descripciones', --carga_metodo
+	'Categoria', --carga_clase
+	'consultas/Categoria.php', --carga_include
 	NULL, --carga_dt
 	NULL, --carga_consulta_php
 	NULL, --carga_sql

@@ -1,0 +1,155 @@
+-o-o-o-o-o-
+Fecha: 18-07-2020 19:36:00
+Operacion: Mantenimiento de usuarios
+Usuario: toba
+Version-PHP: 7.3.13
+Servidor: localhost
+URI: /portal/editor/aplicacion.php?ah=st5f13785c3fc682.85394310&ai=toba_usuarios%7C%7C3432&tm=1
+Referrer: http://localhost:81/portal/editor/aplicacion.php?ah=st5f13785c222ce6.76638004&ai=toba_editor%7C%7C1000241
+Host: 192.168.112.1
+==========
+[INFO][toba] Se detecto acceso desde el menu. Se limpia la memoria de la operacion
+[DEBUG][toba_usuarios] Guardando parametros del item original
+[DEBUG][toba_usuarios] array (
+  'tm' => '1',
+)
+[DEBUG][toba_usuarios] PUNTO DE MONTAJE: se cargó exitosamente el autoload del punto de montaje proyecto
+[INFO][toba_usuarios] PUNTO MONTAJE: se cargó la clase extension_toba/sesion.php del punto de montaje proyecto. El path del mismo es /app/toba/vendor/siu-toba/framework/proyectos/toba_usuarios/php
+[DEBUG][toba] Cargando USUARIO 'toba' en el proyecto 'toba_usuarios'
+[DEBUG][toba] Crear SESION '29' en el proyecto 'toba_usuarios'
+[DEBUG][toba] Se creo la SESION [usuario: toba ]
+[INFO][toba_usuarios] PUNTO MONTAJE: se cargó la clase extension_toba/sesion.php del punto de montaje proyecto. El path del mismo es /app/toba/vendor/siu-toba/framework/proyectos/toba_usuarios/php
+[DEBUG][toba] [SECCION] Iniciando componentes...
+[INFO][toba_usuarios] PUNTO MONTAJE: se cargó la clase usuarios/ci_navegacion.php del punto de montaje proyecto. El path del mismo es /app/toba/vendor/siu-toba/framework/proyectos/toba_usuarios/php
+[DEBUG][toba] componente(2190): [callback][ ini__operacion ]
+[DEBUG][toba] [SECCION] Procesando eventos...
+[INFO][toba] componente(2190): No hay señales de un servicio anterior, no se atrapan eventos
+[DEBUG][toba] [SECCION] Configurando dependencias para responder al servicio...
+[DEBUG][toba] componente(2190): Pantalla de servicio: 'seleccionar'
+[DEBUG][toba] componente(2190): [ callback ] 'conf__seleccionar'
+[INFO][toba_usuarios] PUNTO MONTAJE: se cargó la clase usuarios/ei_form_filtro_usuarios.php del punto de montaje proyecto. El path del mismo es /app/toba/vendor/siu-toba/framework/proyectos/toba_usuarios/php
+[DEBUG][toba] componente(2190): [ callback ] 'conf__filtro'
+[DEBUG][toba] Se filtro el evento: cancelar
+[DEBUG][toba] componente(2190): [ callback ] 'conf__cuadro'
+[DEBUG][toba] [SECCION] Respondiendo al servicio__generar_html...
+-o-o-o-o-o-
+Fecha: 18-07-2020 19:36:10
+Operacion: Log de Datos
+Usuario: toba
+Version-PHP: 7.3.13
+Servidor: localhost
+URI: /portal/usuarios/aplicacion.php?tm=1&tcm=central&ai=toba_usuarios||3460
+Referrer: http://localhost:81/portal/editor/aplicacion.php?ah=st5f13785c3fc682.85394310&ai=toba_usuarios%7C%7C3432&tm=1
+Host: 192.168.112.1
+==========
+[INFO][toba] Se detecto acceso desde el menu. Se limpia la memoria de la operacion
+[DEBUG][toba_usuarios] PUNTO DE MONTAJE: se cargó exitosamente el autoload del punto de montaje proyecto
+[INFO][toba_usuarios] PUNTO MONTAJE: se cargó la clase extension_toba/sesion.php del punto de montaje proyecto. El path del mismo es /app/toba/vendor/siu-toba/framework/proyectos/toba_usuarios/php
+[DEBUG][toba] [SECCION] Iniciando componentes...
+[INFO][toba_usuarios] PUNTO MONTAJE: se cargó la clase auditoria/log_datos/ci_auditoria.php del punto de montaje proyecto. El path del mismo es /app/toba/vendor/siu-toba/framework/proyectos/toba_usuarios/php
+[DEBUG][toba] componente(2274): [callback][ ini__operacion ]
+[DEBUG][toba] [SECCION] Procesando eventos...
+[INFO][toba] componente(2274): No hay señales de un servicio anterior, no se atrapan eventos
+[DEBUG][toba] [SECCION] Configurando dependencias para responder al servicio...
+[DEBUG][toba] componente(2274): Pantalla de servicio: 'pant_inicial'
+[DEBUG][toba] componente(2274): [ callback ] 'conf__pant_inicial'
+[INFO][toba] componente(2274): [ callback ] 'conf__cuadro' no fue atrapado
+[INFO][toba_usuarios] PUNTO MONTAJE: se cargó la clase auditoria/log_datos/filtro_auditoria.php del punto de montaje proyecto. El path del mismo es /app/toba/vendor/siu-toba/framework/proyectos/toba_usuarios/php
+[DEBUG][toba] componente(2274): [ callback ] 'conf__filtro'
+[DEBUG][toba] [SECCION] Respondiendo al servicio__generar_html...
+-o-o-o-o-o-
+Fecha: 18-07-2020 19:36:12
+Operacion: Log de Datos
+Usuario: toba
+Version-PHP: 7.3.13
+Servidor: localhost
+URI: /portal/usuarios/aplicacion.php?ah=st5f13795a97fcf9.47946083&ai=toba_usuarios||3460&tcm=central&ai=toba_usuarios||3460&ts=cascadas_efs&cascadas-ef=tablas&cascadas-maestros=proyecto-;-portal-%7C-esquema-;-public_auditoria-%7C-&tsd=toba_usuarios||2273,
+Referrer: http://localhost:81/portal/usuarios/aplicacion.php?tm=1&tcm=central&ai=toba_usuarios||3460
+Host: 192.168.112.1
+==========
+[DEBUG][toba_usuarios] PUNTO DE MONTAJE: se cargó exitosamente el autoload del punto de montaje proyecto
+[INFO][toba_usuarios] PUNTO MONTAJE: se cargó la clase extension_toba/sesion.php del punto de montaje proyecto. El path del mismo es /app/toba/vendor/siu-toba/framework/proyectos/toba_usuarios/php
+[DEBUG][toba] [SECCION] Iniciando componentes...
+[INFO][toba_usuarios] PUNTO MONTAJE: se cargó la clase auditoria/log_datos/ci_auditoria.php del punto de montaje proyecto. El path del mismo es /app/toba/vendor/siu-toba/framework/proyectos/toba_usuarios/php
+[DEBUG][toba] componente(2274): Pantalla de eventos: 'pant_inicial'
+[DEBUG][toba] [SECCION] Procesando eventos...
+[DEBUG][toba] componente(2274): [ inicializar_dependencias ]
+array (
+  0 => 'filtro',
+)
+[INFO][toba_usuarios] PUNTO MONTAJE: se cargó la clase auditoria/log_datos/filtro_auditoria.php del punto de montaje proyecto. El path del mismo es /app/toba/vendor/siu-toba/framework/proyectos/toba_usuarios/php
+[DEBUG][toba] [SECCION] Configurando dependencias para responder al servicio...
+[DEBUG][toba] componente(2274): Pantalla de servicio: 'pant_inicial'
+[DEBUG][toba] componente(2274): [ callback ] 'conf__pant_inicial'
+[INFO][toba] componente(2274): [ callback ] 'conf__cuadro' no fue atrapado
+[DEBUG][toba] componente(2274): [ callback ] 'conf__filtro'
+[DEBUG][toba] [SECCION] Respondiendo al servicio__cascadas_efs...
+[DEBUG][toba_usuarios] Cascadas 'tablas', Estado de los maestros: array (
+  'proyecto' => 'portal',
+  'esquema' => 'public_auditoria',
+)
+[DEBUG][toba_usuarios] Cascadas 'tablas', Respuesta: array (
+  'logs_categorias' => 'logs_categorias',
+  'logs_escuelas' => 'logs_escuelas',
+  'logs_paginas' => 'logs_paginas',
+  'logs_param_clasificacion' => 'logs_param_clasificacion',
+  'logs_param_departamentos' => 'logs_param_departamentos',
+  'logs_param_localidades' => 'logs_param_localidades',
+  'logs_param_paises' => 'logs_param_paises',
+  'logs_param_provincias' => 'logs_param_provincias',
+  'logs_param_tipos' => 'logs_param_tipos',
+  'logs_personas' => 'logs_personas',
+  'logs_publicaciones' => 'logs_publicaciones',
+  'logs_publicaciones_categorias' => 'logs_publicaciones_categorias',
+  'logs_publicaciones_galerias' => 'logs_publicaciones_galerias',
+  'logs_suscripciones' => 'logs_suscripciones',
+  'logs_usuarios' => 'logs_usuarios',
+)
+-o-o-o-o-o-
+Fecha: 18-07-2020 19:36:15
+Operacion: Log de Datos
+Usuario: toba
+Version-PHP: 7.3.13
+Servidor: localhost
+URI: /portal/usuarios/aplicacion.php?ah=st5f13795a97fcf9.47946083&ai=toba_usuarios%7C%7C3460
+Referrer: http://localhost:81/portal/usuarios/aplicacion.php?tm=1&tcm=central&ai=toba_usuarios||3460
+Host: 192.168.112.1
+==========
+[DEBUG][toba_usuarios] PUNTO DE MONTAJE: se cargó exitosamente el autoload del punto de montaje proyecto
+[INFO][toba_usuarios] PUNTO MONTAJE: se cargó la clase extension_toba/sesion.php del punto de montaje proyecto. El path del mismo es /app/toba/vendor/siu-toba/framework/proyectos/toba_usuarios/php
+[DEBUG][toba] [SECCION] Iniciando componentes...
+[INFO][toba_usuarios] PUNTO MONTAJE: se cargó la clase auditoria/log_datos/ci_auditoria.php del punto de montaje proyecto. El path del mismo es /app/toba/vendor/siu-toba/framework/proyectos/toba_usuarios/php
+[DEBUG][toba] componente(2274): Pantalla de eventos: 'pant_inicial'
+[DEBUG][toba] [SECCION] Procesando eventos...
+[DEBUG][toba] componente(2274): [ inicializar_dependencias ]
+array (
+  0 => 'filtro',
+)
+[INFO][toba_usuarios] PUNTO MONTAJE: se cargó la clase auditoria/log_datos/filtro_auditoria.php del punto de montaje proyecto. El path del mismo es /app/toba/vendor/siu-toba/framework/proyectos/toba_usuarios/php
+[DEBUG][toba] componente(2274): [ registrar_evento ] 'filtrar' -> [ evt__filtro__filtrar ]
+array (
+  0 => 
+  array (
+    'proyecto' => 'portal',
+    'esquema' => 'public_auditoria',
+    'tablas' => 
+    array (
+      0 => 'logs_categorias',
+    ),
+    'fecha_desde' => NULL,
+    'fecha_hasta' => NULL,
+    'usuario' => NULL,
+    'operacion' => NULL,
+    'auditoria_id_solicitud' => NULL,
+    'ordenar' => 'fecha',
+    'campo' => NULL,
+    'valor' => NULL,
+  ),
+)
+[DEBUG][toba] [SECCION] Configurando dependencias para responder al servicio...
+[DEBUG][toba] componente(2274): Pantalla de servicio: 'pant_inicial'
+[DEBUG][toba] componente(2274): [ callback ] 'conf__pant_inicial'
+[INFO][toba] componente(2274): [ callback ] 'conf__cuadro' no fue atrapado
+[INFO][toba] componente(2274): [ callback ] 'conf__cuadro_logs_categorias' no fue atrapado
+[DEBUG][toba] componente(2274): [ callback ] 'conf__filtro'
+[DEBUG][toba] [SECCION] Respondiendo al servicio__generar_html...

@@ -26,7 +26,7 @@ class Publicacion
 			t_p.descripcion,
 			t_p.cuerpo,
 			t_p.fecha_publicacion,
-			t_c.descripcion as categoria,
+			t_c.denominacion as categoria,
 			t_p.fecha_operacion,
 			t_p.usuario,
 			t_p.tag

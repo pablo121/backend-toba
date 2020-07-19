@@ -128,11 +128,11 @@ INSERT INTO apex_objeto_cuadro (objeto_cuadro_proyecto, objeto_cuadro, titulo, s
 	'0', --clave_dbr
 	NULL, --archivos_callbacks
 	'100%', --ancho
-	'0', --ordenar
+	'1', --ordenar
 	'1', --paginar
-	NULL, --tamano_pagina
+	'15', --tamano_pagina
 	'P', --tipo_paginado
-	'0', --mostrar_total_registros
+	'1', --mostrar_total_registros
 	'1', --eof_invisible
 	NULL, --eof_customizado
 	'0', --siempre_con_titulo
@@ -157,28 +157,6 @@ INSERT INTO apex_objeto_cuadro (objeto_cuadro_proyecto, objeto_cuadro, titulo, s
 	NULL, --cc_modo_anidado_totcol
 	NULL  --cc_modo_anidado_totcua
 );
-
-------------------------------------------------------------
--- apex_objeto_cuadro_cc
-------------------------------------------------------------
-
---- INICIO Grupo de desarrollo 0
-INSERT INTO apex_objeto_cuadro_cc (objeto_cuadro_proyecto, objeto_cuadro, objeto_cuadro_cc, identificador, descripcion, orden, columnas_id, columnas_descripcion, pie_contar_filas, pie_mostrar_titular, pie_mostrar_titulos, imp_paginar, modo_inicio_colapsado) VALUES (
-	'portal', --objeto_cuadro_proyecto
-	'2378', --objeto_cuadro
-	'36', --objeto_cuadro_cc
-	'categoria', --identificador
-	'Categoria', --descripcion
-	'1', --orden
-	'categoria', --columnas_id
-	'categoria', --columnas_descripcion
-	'0', --pie_contar_filas
-	'0', --pie_mostrar_titular
-	'0', --pie_mostrar_titulos
-	NULL, --imp_paginar
-	'0'  --modo_inicio_colapsado
-);
---- FIN Grupo de desarrollo 0
 
 ------------------------------------------------------------
 -- apex_objeto_ei_cuadro_columna
@@ -221,7 +199,7 @@ INSERT INTO apex_objeto_ei_cuadro_columna (objeto_cuadro_proyecto, objeto_cuadro
 	'2378', --objeto_cuadro
 	'878', --objeto_cuadro_col
 	'titulo', --clave
-	'1', --orden
+	'2', --orden
 	'Titulo', --titulo
 	'ei-cuadro-col-tit', --estilo_titulo
 	'4', --estilo
@@ -314,7 +292,7 @@ INSERT INTO apex_objeto_ei_cuadro_columna (objeto_cuadro_proyecto, objeto_cuadro
 	'2378', --objeto_cuadro
 	'882', --objeto_cuadro_col
 	'categoria', --clave
-	'2', --orden
+	'1', --orden
 	'Seccion', --titulo
 	'ei-cuadro-col-tit', --estilo_titulo
 	'4', --estilo

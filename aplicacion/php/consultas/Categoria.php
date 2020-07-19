@@ -10,6 +10,9 @@ class Categoria implements portal_tablas
 		if (isset($filtro['id_tipo_estado'])) {
 			$where[] = "id_tipo_estado = ".quote($filtro['id_tipo_estado']);
 		}
+		if (isset($filtro['id_padre'])) {
+			$where[] = "id_padre = ".quote($filtro['id_padre']);
+		}
 		if (isset($filtro['codigo'])) {
 			$where[] = "codigo ILIKE ".quote("%{$filtro['codigo']}%");
 		}
@@ -21,18 +24,24 @@ class Categoria implements portal_tablas
 		}
 		$sql = "SELECT
 			t_c.id,
-			t_c.codigo || ' - ' || t_pt.denominacion as denominacion,
+			t_pt.denominacion as categoria,
 			t_pt1.denominacion as estado,
 			t_c.codigo,
 			t_c.denominacion,
 			t_c.descripcion,
-			t_c.suscripciones
-		FROM
-			categorias as t_c,
-			param_tipos as t_pt,
-			param_tipos as t_pt1
-		WHERE t_c.id_tipo_categoria = t_pt.id AND  t_c.id_tipo_estado = t_pt1.id
-		ORDER BY descripcion";
+			t_c.suscripciones,
+			t_c.orden,
+			t_c.principal,
+			t_c.imagen_portada,
+			t_padre.id as id_padre,
+			case when id_padre is null then 'PRINCIPAL'
+				else t_padre.denominacion
+			end as seccion_padre
+		FROM categorias as t_c
+		INNER JOIN param_tipos as t_pt ON (t_c.id_tipo_categoria = t_pt.id)
+		INNER JOIN param_tipos as t_pt1 On (t_c.id_tipo_estado = t_pt1.id)
+		LEFT JOIN categorias t_padre ON (t_padre.id=t_c.id_padre)
+		ORDER BY t_c.orden, t_c.denominacion";
 		if (count($where)>0) {
 			$sql = sql_concatenar_where($sql, $where);
 		}

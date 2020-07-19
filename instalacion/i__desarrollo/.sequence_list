@@ -36,7 +36,7 @@
         "last_value": 183
     },
     "apex_objeto_dbr_columna_seq": {
-        "last_value": 882
+        "last_value": 886
     },
     "apex_objeto_dbr_ext_seq": {
         "last_value": 11
@@ -45,16 +45,16 @@
         "last_value": 11
     },
     "apex_obj_ei_cuadro_col_seq": {
-        "last_value": 893
+        "last_value": 896
     },
     "apex_obj_ci_pantalla_seq": {
         "last_value": 1216
     },
     "apex_obj_ei_form_fila_seq": {
-        "last_value": 5511
+        "last_value": 5515
     },
     "apex_obj_ei_cuadro_cc_seq": {
-        "last_value": 36
+        "last_value": 37
     },
     "apex_objeto_dep_seq": {
         "last_value": 1256
@@ -129,10 +129,10 @@
         "last_value": 1
     },
     "apex_sesion_browser_seq": {
-        "last_value": 25
+        "last_value": 32
     },
     "apex_solicitud_seq": {
-        "last_value": 724
+        "last_value": 1028
     },
     "apex_solicitud_observacion_seq": {
         "last_value": 1
@@ -147,6 +147,6 @@
         "last_value": 1
     },
     "apex_log_objeto_seq": {
-        "last_value": 66
+        "last_value": 97
     }
 }
