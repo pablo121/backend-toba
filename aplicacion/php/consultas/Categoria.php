@@ -33,6 +33,7 @@ class Categoria implements portal_tablas
 			t_c.orden,
 			t_c.principal,
 			t_c.imagen_portada,
+			t_ub.denominacion as ubicacion,
 			t_padre.id as padre,
 			case when t_c.id_padre is null then 'PRINCIPAL'
 				else t_padre.denominacion
@@ -40,8 +41,9 @@ class Categoria implements portal_tablas
 		FROM categorias as t_c
 		INNER JOIN param_tipos as t_pt ON (t_c.id_tipo_categoria = t_pt.id)
 		INNER JOIN param_tipos as t_pt1 On (t_c.id_tipo_estado = t_pt1.id)
+		INNER JOIN param_tipos as t_ub On (t_c.id_ubicacion = t_ub.id)
 		LEFT JOIN categorias t_padre ON (t_padre.id=t_c.id_padre)
-		ORDER BY t_c.orden, t_c.denominacion";
+		ORDER BY t_pt.denominacion asc, t_c.orden, t_c.denominacion";
 		if (count($where)>0) {
 			$sql = sql_concatenar_where($sql, $where);
 		}
@@ -50,7 +52,7 @@ class Categoria implements portal_tablas
 
     function get_descripciones($id = null)
 	{
-		$sql = "SELECT id,  codigo || ' - ' ||  denominacion as denominacion FROM categorias ORDER BY descripcion";
+		$sql = "SELECT id, denominacion FROM categorias ORDER BY denominacion asc";
 		return toba::db('portal')->consultar($sql);
 	}
 

@@ -143,7 +143,22 @@ INSERT INTO apex_objeto_cuadro_cc (objeto_cuadro_proyecto, objeto_cuadro, objeto
 	'0', --pie_mostrar_titular
 	'0', --pie_mostrar_titulos
 	NULL, --imp_paginar
-	'0'  --modo_inicio_colapsado
+	'1'  --modo_inicio_colapsado
+);
+INSERT INTO apex_objeto_cuadro_cc (objeto_cuadro_proyecto, objeto_cuadro, objeto_cuadro_cc, identificador, descripcion, orden, columnas_id, columnas_descripcion, pie_contar_filas, pie_mostrar_titular, pie_mostrar_titulos, imp_paginar, modo_inicio_colapsado) VALUES (
+	'portal', --objeto_cuadro_proyecto
+	'2344', --objeto_cuadro
+	'38', --objeto_cuadro_cc
+	'ubicacion', --identificador
+	'Ubicacion', --descripcion
+	'2', --orden
+	'ubicacion', --columnas_id
+	'ubicacion', --columnas_descripcion
+	'0', --pie_contar_filas
+	'0', --pie_mostrar_titular
+	'0', --pie_mostrar_titulos
+	NULL, --imp_paginar
+	'1'  --modo_inicio_colapsado
 );
 --- FIN Grupo de desarrollo 0
 
@@ -341,14 +356,14 @@ INSERT INTO apex_objeto_ei_cuadro_columna (objeto_cuadro_proyecto, objeto_cuadro
 INSERT INTO apex_objeto_ei_cuadro_columna (objeto_cuadro_proyecto, objeto_cuadro, objeto_cuadro_col, clave, orden, titulo, estilo_titulo, estilo, ancho, formateo, vinculo_indice, no_ordenar, mostrar_xls, mostrar_pdf, pdf_propiedades, desabilitado, total, total_cc, usar_vinculo, vinculo_carpeta, vinculo_item, vinculo_popup, vinculo_popup_param, vinculo_target, vinculo_celda, vinculo_servicio, permitir_html, grupo, evento_asociado) VALUES (
 	'portal', --objeto_cuadro_proyecto
 	'2344', --objeto_cuadro
-	'895', --objeto_cuadro_col
-	'principal', --clave
+	'897', --objeto_cuadro_col
+	'ubicacion', --clave
 	'5', --orden
-	'Principal', --titulo
+	'Ubicacion', --titulo
 	'ei-cuadro-col-tit', --estilo_titulo
-	'7', --estilo
+	'4', --estilo
 	NULL, --ancho
-	'13', --formateo
+	'1', --formateo
 	NULL, --vinculo_indice
 	NULL, --no_ordenar
 	NULL, --mostrar_xls

@@ -13,5 +13,9 @@ class Tipos extends Tipos_dato{
         $filtro=array('id_clasificacion'=>3);
         return self::get_listado($filtro);
     }
+    public function get_ubicaciones(){
+        $filtro=array('id_clasificacion'=>4);
+        return self::get_listado($filtro);
+    }
 }
 ?>

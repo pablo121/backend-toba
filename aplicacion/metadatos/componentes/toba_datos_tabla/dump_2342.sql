@@ -186,7 +186,7 @@ INSERT INTO apex_objeto_db_registros_col (objeto_proyecto, objeto, col_id, colum
 	'2342', --objeto
 	'884', --col_id
 	'imagen_portada', --columna
-	'X', --tipo
+	'C', --tipo
 	'0', --pk
 	'', --secuencia
 	NULL, --largo
@@ -218,6 +218,20 @@ INSERT INTO apex_objeto_db_registros_col (objeto_proyecto, objeto, col_id, colum
 	'0', --pk
 	'', --secuencia
 	NULL, --largo
+	NULL, --no_nulo
+	'0', --no_nulo_db
+	'0', --externa
+	'categorias'  --tabla
+);
+INSERT INTO apex_objeto_db_registros_col (objeto_proyecto, objeto, col_id, columna, tipo, pk, secuencia, largo, no_nulo, no_nulo_db, externa, tabla) VALUES (
+	'portal', --objeto_proyecto
+	'2342', --objeto
+	'888', --col_id
+	'id_ubicacion', --columna
+	'C', --tipo
+	'0', --pk
+	'', --secuencia
+	'10', --largo
 	NULL, --no_nulo
 	'0', --no_nulo_db
 	'0', --externa

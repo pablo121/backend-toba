@@ -55,7 +55,6 @@ class ci_publicaciones extends portal_ci
 			if($datos['path'] != null ){
 				$datos['path_aux'] = $datos['path'];
 				$datos['path'] = 'Imagen portada';
-            	
 			}
 			
 			$form->set_datos($datos);
@@ -69,8 +68,7 @@ class ci_publicaciones extends portal_ci
 		//ei_arbol($datos);
 		if($datos['usuario']=='')
 			$datos['usuario']=toba::usuario()->get_id();
-//$datos = base64_encode(file_get_contents($datos['path']['tmp_name']));
-//ei_arbol($datos['path']['tmp_name']);
+
 		if($datos['path'] != 'Imagen portada'){
 			if (is_array($datos['path']))
 				$datos['path'] = base64_encode(file_get_contents($datos['path']['tmp_name']));

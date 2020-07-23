@@ -51,7 +51,13 @@ class ci_categorias extends portal_ci
 	function conf__formulario(toba_ei_formulario $form)
 	{
 		if ($this->dep('datos')->esta_cargada()) {
-			$form->set_datos($this->dep('datos')->tabla('categorias')->get());
+			$datos = $this->dep('datos')->tabla('categorias')->get();
+			
+			if($datos['imagen_portada'] != null ){
+				$datos['imagen_aux'] = $datos['imagen_portada'];
+				$datos['imagen_portada'] = 'Imagen portada';
+			}
+			$form->set_datos($datos);
 		} else {
 			$this->pantalla()->eliminar_evento('eliminar');
 		}
@@ -59,8 +65,15 @@ class ci_categorias extends portal_ci
 
 	function evt__formulario__modificacion($datos)
 	{
-		 $datos['codigo']= strtoupper($datos['codigo']);
-		  $datos['denominacion']= strtoupper($datos['denominacion']);
+		$datos['codigo']= strtolower($datos['codigo']);
+		$datos['denominacion']= strtoupper($datos['denominacion']);
+		
+		if($datos['imagen_portada'] != 'Imagen portada'){
+			if (is_array($datos['imagen_portada']))
+				$datos['imagen_portada'] = base64_encode(file_get_contents($datos['imagen_portada']['tmp_name']));
+			else
+				$datos['imagen_portada'] = $datos['imagen_aux'];
+		}
 		$this->dep('datos')->tabla('categorias')->set($datos);
 	}
 
