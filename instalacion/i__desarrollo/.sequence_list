@@ -129,10 +129,10 @@
         "last_value": 1
     },
     "apex_sesion_browser_seq": {
-        "last_value": 38
+        "last_value": 43
     },
     "apex_solicitud_seq": {
-        "last_value": 1334
+        "last_value": 1397
     },
     "apex_solicitud_observacion_seq": {
         "last_value": 1
@@ -147,6 +147,6 @@
         "last_value": 1
     },
     "apex_log_objeto_seq": {
-        "last_value": 128
+        "last_value": 132
     }
 }
