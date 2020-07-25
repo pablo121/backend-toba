@@ -27,15 +27,14 @@ class Publicacion
 			t_p.cuerpo,
 			t_p.fecha_publicacion,
 			t_c.denominacion as categoria,
+			t_padre.denominacion || '->' || t_pt.denominacion as categoria_completa,
 			t_p.fecha_operacion,
 			t_p.usuario,
 			t_p.tag
-		FROM
-			publicaciones as t_p,
-			param_tipos as t_pt,
-			categorias as t_c
-		WHERE	t_p.id_tipo_estado = t_pt.id
-				AND  t_p.id_categoria = t_c.id
+		FROM publicaciones as t_p
+		INNER JOIN	param_tipos as t_pt on t_p.id_tipo_estado = t_pt.id
+		INNER JOIN	categorias as t_c ON t_p.id_categoria = t_c.id
+		INNER JOIN	categorias as t_padre ON t_padre.id = t_c.id_padre
 		ORDER BY t_p.fecha_publicacion DESC";
 		if (count($where)>0) {
 			$sql = sql_concatenar_where($sql, $where);

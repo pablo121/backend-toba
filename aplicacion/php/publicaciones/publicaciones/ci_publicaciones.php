@@ -52,6 +52,7 @@ class ci_publicaciones extends portal_ci
 	{
 		if ($this->dep('datos')->esta_cargada()) {
 			$datos = $this->dep('datos')->tabla('publicaciones')->get();
+			
 			if($datos['path'] != null ){
 				$datos['path_aux'] = $datos['path'];
 				$datos['path'] = 'Imagen portada';

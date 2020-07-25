@@ -291,7 +291,7 @@ INSERT INTO apex_objeto_ei_cuadro_columna (objeto_cuadro_proyecto, objeto_cuadro
 	'portal', --objeto_cuadro_proyecto
 	'2378', --objeto_cuadro
 	'882', --objeto_cuadro_col
-	'categoria', --clave
+	'categoria_completa', --clave
 	'1', --orden
 	'Seccion', --titulo
 	'ei-cuadro-col-tit', --estilo_titulo

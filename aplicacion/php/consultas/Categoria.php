@@ -24,6 +24,7 @@ class Categoria implements portal_tablas
 		}
 		$sql = "SELECT
 			t_c.id,
+			t_padre.denominacion || '->' || t_pt.denominacion as categoria_completa,
 			t_pt.denominacion as categoria,
 			t_pt1.denominacion as estado,
 			t_c.codigo,
@@ -53,6 +54,18 @@ class Categoria implements portal_tablas
     function get_descripciones($id = null)
 	{
 		$sql = "SELECT id, denominacion FROM categorias ORDER BY denominacion asc";
+		return toba::db('portal')->consultar($sql);
+	}  
+	
+	function get_secciones_hijas($id)
+	{
+		$where = ' WHERE id_padre = '.quote($id);
+		$sql = "SELECT id, denominacion FROM categorias $where ORDER BY denominacion asc";
+		return toba::db('portal')->consultar($sql);
+	}
+	function get_secciones_ppal($id = null)
+	{
+		$sql = "SELECT id, denominacion FROM categorias where id_tipo_categoria= 'PRI' ORDER BY denominacion asc";
 		return toba::db('portal')->consultar($sql);
 	}
 

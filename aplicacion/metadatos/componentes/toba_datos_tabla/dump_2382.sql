@@ -79,8 +79,8 @@ INSERT INTO apex_objeto_db_registros_col (objeto_proyecto, objeto, col_id, colum
 	'paginas_id_seq', --secuencia
 	NULL, --largo
 	NULL, --no_nulo
-	NULL, --no_nulo_db
-	NULL, --externa
+	'0', --no_nulo_db
+	'0', --externa
 	NULL  --tabla
 );
 INSERT INTO apex_objeto_db_registros_col (objeto_proyecto, objeto, col_id, columna, tipo, pk, secuencia, largo, no_nulo, no_nulo_db, externa, tabla) VALUES (
@@ -89,12 +89,12 @@ INSERT INTO apex_objeto_db_registros_col (objeto_proyecto, objeto, col_id, colum
 	'873', --col_id
 	'id_categoria', --columna
 	'C', --tipo
-	NULL, --pk
+	'0', --pk
 	NULL, --secuencia
 	NULL, --largo
 	NULL, --no_nulo
-	NULL, --no_nulo_db
-	NULL, --externa
+	'0', --no_nulo_db
+	'0', --externa
 	NULL  --tabla
 );
 INSERT INTO apex_objeto_db_registros_col (objeto_proyecto, objeto, col_id, columna, tipo, pk, secuencia, largo, no_nulo, no_nulo_db, externa, tabla) VALUES (
@@ -103,12 +103,12 @@ INSERT INTO apex_objeto_db_registros_col (objeto_proyecto, objeto, col_id, colum
 	'874', --col_id
 	'denominacion', --columna
 	'C', --tipo
-	NULL, --pk
+	'0', --pk
 	NULL, --secuencia
 	NULL, --largo
 	NULL, --no_nulo
-	NULL, --no_nulo_db
-	NULL, --externa
+	'0', --no_nulo_db
+	'0', --externa
 	NULL  --tabla
 );
 INSERT INTO apex_objeto_db_registros_col (objeto_proyecto, objeto, col_id, columna, tipo, pk, secuencia, largo, no_nulo, no_nulo_db, externa, tabla) VALUES (
@@ -117,12 +117,47 @@ INSERT INTO apex_objeto_db_registros_col (objeto_proyecto, objeto, col_id, colum
 	'875', --col_id
 	'descripcion', --columna
 	'C', --tipo
-	NULL, --pk
+	'0', --pk
 	NULL, --secuencia
 	NULL, --largo
 	NULL, --no_nulo
-	NULL, --no_nulo_db
-	NULL, --externa
+	'0', --no_nulo_db
+	'0', --externa
 	NULL  --tabla
 );
 --- FIN Grupo de desarrollo 0
+
+------------------------------------------------------------
+-- apex_objeto_db_registros_ext
+------------------------------------------------------------
+
+--- INICIO Grupo de desarrollo 0
+INSERT INTO apex_objeto_db_registros_ext (objeto_proyecto, objeto, externa_id, tipo, sincro_continua, metodo, clase, include, punto_montaje, sql, dato_estricto, carga_dt, carga_consulta_php, permite_carga_masiva, metodo_masivo) VALUES (
+	'portal', --objeto_proyecto
+	'2382', --objeto
+	'12', --externa_id
+	'sql', --tipo
+	'1', --sincro_continua
+	NULL, --metodo
+	NULL, --clase
+	NULL, --include
+	'13', --punto_montaje
+	'select id_padre from categorias where id=%id_categoria%', --sql
+	'0', --dato_estricto
+	NULL, --carga_dt
+	NULL, --carga_consulta_php
+	'0', --permite_carga_masiva
+	NULL  --metodo_masivo
+);
+--- FIN Grupo de desarrollo 0
+
+------------------------------------------------------------
+-- apex_objeto_db_registros_ext_col
+------------------------------------------------------------
+INSERT INTO apex_objeto_db_registros_ext_col (objeto_proyecto, objeto, externa_id, col_id, es_resultado) VALUES (
+	'portal', --objeto_proyecto
+	'2382', --objeto
+	'12', --externa_id
+	'873', --col_id
+	'0'  --es_resultado
+);

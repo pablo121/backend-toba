@@ -140,7 +140,7 @@ INSERT INTO apex_objeto_ei_formulario_ef (objeto_ei_formulario_fila, objeto_ei_f
 	'id_tipo_categoria', --columnas
 	'1', --obligatorio
 	'0', --oculto_relaja_obligatorio
-	'5', --orden
+	'2', --orden
 	'Categoria', --etiqueta
 	NULL, --etiqueta_estilo
 	NULL, --descripcion
@@ -235,7 +235,7 @@ INSERT INTO apex_objeto_ei_formulario_ef (objeto_ei_formulario_fila, objeto_ei_f
 	NULL, --estado_defecto
 	'0', --solo_lectura
 	'0', --solo_lectura_modificacion
-	'get_estados_grales', --carga_metodo
+	'get_estados_publicaciones', --carga_metodo
 	'Tipos', --carga_clase
 	'consultas/Tipos.php', --carga_include
 	NULL, --carga_dt
@@ -302,7 +302,7 @@ INSERT INTO apex_objeto_ei_formulario_ef (objeto_ei_formulario_fila, objeto_ei_f
 	'codigo', --columnas
 	'1', --obligatorio
 	'0', --oculto_relaja_obligatorio
-	'2', --orden
+	'3', --orden
 	'Codigo', --etiqueta
 	NULL, --etiqueta_estilo
 	'Código utilizado en el frond-end,', --descripcion
@@ -383,7 +383,7 @@ INSERT INTO apex_objeto_ei_formulario_ef (objeto_ei_formulario_fila, objeto_ei_f
 	'denominacion', --columnas
 	'1', --obligatorio
 	'0', --oculto_relaja_obligatorio
-	'3', --orden
+	'4', --orden
 	'Denominacion', --etiqueta
 	NULL, --etiqueta_estilo
 	NULL, --descripcion
@@ -464,7 +464,7 @@ INSERT INTO apex_objeto_ei_formulario_ef (objeto_ei_formulario_fila, objeto_ei_f
 	'descripcion', --columnas
 	'0', --obligatorio
 	'0', --oculto_relaja_obligatorio
-	'4', --orden
+	'5', --orden
 	'Descripcion', --etiqueta
 	NULL, --etiqueta_estilo
 	NULL, --descripcion
@@ -640,7 +640,7 @@ INSERT INTO apex_objeto_ei_formulario_ef (objeto_ei_formulario_fila, objeto_ei_f
 	NULL, --estado_defecto
 	'0', --solo_lectura
 	'0', --solo_lectura_modificacion
-	'get_descripciones', --carga_metodo
+	'get_secciones_ppal', --carga_metodo
 	'Categoria', --carga_clase
 	'consultas/Categoria.php', --carga_include
 	NULL, --carga_dt
@@ -867,7 +867,7 @@ INSERT INTO apex_objeto_ei_formulario_ef (objeto_ei_formulario_fila, objeto_ei_f
 	'orden', --identificador
 	'ef_editable_numero', --elemento_formulario
 	'orden', --columnas
-	'0', --obligatorio
+	'1', --obligatorio
 	'0', --oculto_relaja_obligatorio
 	'7', --orden
 	'Orden', --etiqueta
