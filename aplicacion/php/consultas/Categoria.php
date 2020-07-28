@@ -5,22 +5,25 @@ class Categoria implements portal_tablas
 	{
 		$where = array();
 		if (isset($filtro['id_tipo_categoria'])) {
-			$where[] = "id_tipo_categoria = ".quote($filtro['id_tipo_categoria']);
+			$where[] = "t_c.id_tipo_categoria = ".quote($filtro['id_tipo_categoria']);
 		}
 		if (isset($filtro['id_tipo_estado'])) {
-			$where[] = "id_tipo_estado = ".quote($filtro['id_tipo_estado']);
+			$where[] = "t_c.id_tipo_estado = ".quote($filtro['id_tipo_estado']);
 		}
 		if (isset($filtro['id_padre'])) {
 			$where[] = "t_c.id_padre = ".quote($filtro['id_padre']);
 		}
 		if (isset($filtro['codigo'])) {
-			$where[] = "codigo ILIKE ".quote("%{$filtro['codigo']}%");
+			$where[] = "t_c.codigo ILIKE ".quote("%{$filtro['codigo']}%");
 		}
 		if (isset($filtro['denominacion'])) {
-			$where[] = "denominacion ILIKE ".quote("%{$filtro['denominacion']}%");
+			$where[] = "t_c.denominacion ILIKE ".quote("%{$filtro['denominacion']}%");
 		}
 		if (isset($filtro['suscripciones'])) {
-			$where[] = "suscripciones = ".quote($filtro['suscripciones']);
+			$where[] = "t_c.suscripciones = ".quote($filtro['suscripciones']);
+		}
+		if (isset($filtro['portada']) && $filtro['portada']==1) {
+			$where[] = "t_c.portada = true";
 		}
 		$sql = "SELECT
 			t_c.id,
@@ -32,7 +35,7 @@ class Categoria implements portal_tablas
 			t_c.descripcion,
 			t_c.suscripciones,
 			t_c.orden,
-			t_c.principal,
+			t_c.portada,
 			t_c.imagen_portada,
 			t_ub.denominacion as ubicacion,
 			t_padre.id as padre,

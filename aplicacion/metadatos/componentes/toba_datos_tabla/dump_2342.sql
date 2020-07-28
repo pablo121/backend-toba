@@ -199,7 +199,7 @@ INSERT INTO apex_objeto_db_registros_col (objeto_proyecto, objeto, col_id, colum
 	'portal', --objeto_proyecto
 	'2342', --objeto
 	'885', --col_id
-	'principal', --columna
+	'portada', --columna
 	'L', --tipo
 	'0', --pk
 	'', --secuencia

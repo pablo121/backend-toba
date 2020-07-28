@@ -783,9 +783,9 @@ INSERT INTO apex_objeto_ei_formulario_ef (objeto_ei_formulario_fila, objeto_ei_f
 	'5514', --objeto_ei_formulario_fila
 	'2345', --objeto_ei_formulario
 	'portal', --objeto_ei_formulario_proyecto
-	'principal', --identificador
+	'portada', --identificador
 	'ef_checkbox', --elemento_formulario
-	'principal', --columnas
+	'portada', --columnas
 	'0', --obligatorio
 	'0', --oculto_relaja_obligatorio
 	'8', --orden
