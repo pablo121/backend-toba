@@ -5,19 +5,22 @@ class Publicacion
 	{
 		$where = array();
 		if (isset($filtro['id_tipo_estado'])) {
-			$where[] = "id_tipo_estado = ".quote($filtro['id_tipo_estado']);
+			$where[] = "t_p.id_tipo_estado = ".quote($filtro['id_tipo_estado']);
 		}
+		if (isset($filtro['id_seccion_padre'])) {
+			$where[] = "t_p.id_seccion_padre = ".quote($filtro['id_seccion_padre']);
+		}		 
 		if (isset($filtro['titulo'])) {
-			$where[] = "titulo ILIKE ".quote("%{$filtro['titulo']}%");
+			$where[] = "t_p.titulo ILIKE ".quote("%{$filtro['titulo']}%");
 		}
 		if (isset($filtro['fecha_publicacion'])) {
-			$where[] = "fecha_publicacion = ".quote($filtro['fecha_publicacion']);
+			$where[] = "t_p.fecha_publicacion = ".quote($filtro['fecha_publicacion']);
 		}
 		if (isset($filtro['id_categoria'])) {
-			$where[] = "id_categoria = ".quote($filtro['id_categoria']);
+			$where[] = "t_p.id_categoria = ".quote($filtro['id_categoria']);
 		}
 		if (isset($filtro['usuario'])) {
-			$where[] = "usuario ILIKE ".quote("%{$filtro['usuario']}%");
+			$where[] = "t_p.usuario ILIKE ".quote("%{$filtro['usuario']}%");
 		}
 		$sql = "SELECT
 			t_p.id,

@@ -282,7 +282,7 @@ INSERT INTO apex_objeto_ei_formulario_ef (objeto_ei_formulario_fila, objeto_ei_f
 	NULL, --estado_defecto
 	'0', --solo_lectura
 	'0', --solo_lectura_modificacion
-	'get_estados_grales', --carga_metodo
+	'get_estados_publicaciones', --carga_metodo
 	'Tipos', --carga_clase
 	'consultas/Tipos.php', --carga_include
 	NULL, --carga_dt

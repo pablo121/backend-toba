@@ -7,6 +7,9 @@ class Categoria implements portal_tablas
 		if (isset($filtro['id_tipo_categoria'])) {
 			$where[] = "t_c.id_tipo_categoria = ".quote($filtro['id_tipo_categoria']);
 		}
+		if (isset($filtro['id_seccion_padre'])) {
+			$where[] = "t_c.id_seccion_padre = ".quote($filtro['id_seccion_padre']);
+		}
 		if (isset($filtro['id_tipo_estado'])) {
 			$where[] = "t_c.id_tipo_estado = ".quote($filtro['id_tipo_estado']);
 		}
