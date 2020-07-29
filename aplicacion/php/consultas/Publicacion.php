@@ -30,7 +30,7 @@ class Publicacion
 			t_p.cuerpo,
 			t_p.fecha_publicacion,
 			t_c.denominacion as categoria,
-			t_padre.denominacion || '->' || t_pt.denominacion as categoria_completa,
+			t_padre.denominacion || '->' || t_c.denominacion as categoria_completa,
 			t_p.fecha_operacion,
 			t_p.usuario,
 			t_p.tag
