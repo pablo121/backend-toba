@@ -30,7 +30,7 @@ class Categoria implements portal_tablas
 		}
 		$sql = "SELECT
 			t_c.id,
-			t_padre.denominacion || '->' || t_pt.denominacion as categoria_completa,
+			t_padre.denominacion || '->' || t_c.denominacion as categoria_completa,
 			t_pt.denominacion as categoria,
 			t_pt1.denominacion as estado,
 			t_c.codigo,
