@@ -22,9 +22,7 @@ class Publicacion
 		if (isset($filtro['usuario'])) {
 			$where[] = "t_p.usuario ILIKE ".quote("%{$filtro['usuario']}%");
 		}
-		if (isset($filtro['portada'])) {
-			$where[] = "t_p.portada = ".quote($filtro['portada']);
-		}
+		
 		$sql = "SELECT
 			t_p.id,
 			t_pt.denominacion as tipo_estado,

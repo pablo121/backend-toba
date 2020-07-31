@@ -32,7 +32,7 @@ class ci_categorias extends portal_ci
 	function conf__cuadro(toba_ei_cuadro $cuadro)
 	{
 		if (isset($this->s__datos_filtro)) {
-			$datos = Categoria::get_listado($this->s__datos_filtro);
+			$datos = Categoria::get_listado($this->s__datos_filtro);	
 			$cuadro->set_datos($datos);
 		} else {
 			$datos = Categoria::get_listado();

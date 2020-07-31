@@ -71,7 +71,7 @@ class Categoria implements portal_tablas
 	}
 	function get_secciones_ppal($id = null)
 	{
-		$sql = "SELECT id, denominacion FROM categorias where id_tipo_categoria= 'PRI' ORDER BY denominacion asc";
+		$sql = "SELECT id, denominacion FROM categorias where id_tipo_categoria= 'PRI' AND ID_PADRE is null ORDER BY denominacion asc";
 		return toba::db('portal')->consultar($sql);
 	}
 
