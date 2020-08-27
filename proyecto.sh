@@ -45,7 +45,7 @@ if [ -z "$PROYECTO_NAME" ]; then
 fi
 if [ -z "$BD_NEGOCIO" ]; then
     echo "**** BD_NEGOCIO - DEFECTO - bd_test";
-    BD_NEGOCIO='bd_negocio';
+    BD_NEGOCIO='bd_test';
 fi
 
 if [ -z "$TOBA_PASS" ]; then
@@ -68,7 +68,12 @@ if [ ! -d ${HOME_TOBA}/vendor ]; then
 	echo "**** Clonando repositorio en "${HOME_TOBA}
 	git clone https://github.com/SIU-Toba/template-proyecto-toba.git
 	mv /tmp/template-proyecto-toba/* ${HOME_TOBA}
-	echo "**** composer "
+    
+    composer require "siu/manejador-salida-bootstrap:^1.0" -d ${HOME_TOBA}/
+
+    sed -i "s/vendor\/siu-toba\/framework/vendor\/siu\/manejador-salida-bootstrap/g" \
+            ${HOME_TOBA}/composer.json
+ 
 	composer install -d ${HOME_TOBA}/
 else
 	cd ${HOME_TOBA}
@@ -93,13 +98,8 @@ if [ -z "$(ls -A "$TOBA_INSTALACION_DIR")" ]; then
         echo '**** CARGANDO'
     	${HOME_TOBA}/bin/toba proyecto cargar -d ${HOME_GESTION} -p ${PROYECTO_NAME} -i desarrollo -a 1;	
     fi
-
-    
-
-    # Instalar los juegos de dato de prueba (Actualmente no se estan mantieniendo mas los datos de prueba)
-#    printf "\n" | ${HOME_GESTION}/bin/guarani instalar;
-
-    # Específico de Guaraní
+     
+    # Específico 
     echo 'chequea_sincro_svn = 1' >> ${TOBA_INSTALACION_DIR}/instalacion.ini;
     echo "menu = 2" > ${HOME_GESTION}/menu.ini;
 
@@ -132,6 +132,23 @@ ln -s ${TOBA_INSTALACION_DIR}/toba.conf /etc/apache2/sites-available/${TOBA_CONF
 #Se deja el ID del container dentro de la configuración de toba, para luego poder usarlo desde el Host
 DOCKER_CONTAINER_ID=`cat /proc/self/cgroup | grep -o  -e "docker-.*.scope" | head -n 1 | sed "s/docker-\(.*\).scope/\\1/"`
 echo "TOBA_DOCKER_ID=$DOCKER_CONTAINER_ID" > ${TOBA_INSTALACION_DIR}/toba_docker.env
+
+#Se actualiza el bases.ini
+echo  "[desarrollo $PROYECTO_NAME $BD_NEGOCIO]"
+
+echo  " " >> ${TOBA_INSTALACION_DIR}/bases.ini
+echo  "[desarrollo $PROYECTO_NAME $BD_NEGOCIO]" >> ${TOBA_INSTALACION_DIR}/bases.ini
+echo  "motor = \"postgres7\"" >> ${TOBA_INSTALACION_DIR}/bases.ini
+echo  "profile = \"$BD_HOST\"" >> ${TOBA_INSTALACION_DIR}/bases.ini
+echo  "usuario = \"$BD_USER\"" >> ${TOBA_INSTALACION_DIR}/bases.ini
+echo  "clave = \"$BD_PASSWORD\"" >> ${TOBA_INSTALACION_DIR}/bases.ini
+echo  "base = \"toba\"" >> ${TOBA_INSTALACION_DIR}/bases.ini
+echo  "puerto = \"$BD_PORT\"" >> ${TOBA_INSTALACION_DIR}/bases.ini
+echo  "encoding = \"LATIN1\"" >> ${TOBA_INSTALACION_DIR}/bases.ini
+echo  "schema = \"$TOBA_INSTANCIA\"" >> ${TOBA_INSTALACION_DIR}/bases.ini
+
+ ${HOME_TOBA}/bin/toba instalacion cambiar_permisos
+   
 
 #Cada vez que se loguea por bash al container, carga las variables de entorno toba
 SCRIPT_ENTORNO_TOBA=`find ${TOBA_INSTALACION_DIR}/entorno_toba.env`
